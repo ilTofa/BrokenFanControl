@@ -16,6 +16,8 @@ I wrote it because I have problems (broken HD sensor, as said before) it should 
 
 The program has been tested _only_ on a Mid-2010 Mac Mini (server edition, the one with 2 disk drives). Should work on any Mac Mini intel but I'm not sure of that. Please make your tests before install!
 
+The script requires python 2.7+, that's the default on Lion and Mountain Lion, can be installed for previous OS X versions.
+
 The code
 --------
 Is very simple: it simply reads, via smcFanControl command line program, the values of TC0D (the processor temperature) and set the maximum speed of the fan (F0Mx) also via smcFanControl. The fan speed goes from 1800 when the CPU temp is 50°C or less to the maximum speed when the temp is over 75°C.
