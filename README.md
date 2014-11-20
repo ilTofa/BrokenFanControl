@@ -36,7 +36,7 @@ The script is installed so that it's called by cron every minute and by SleepWat
 
 Follow the instructions. The instructions are not very easy to follow. This is intentional. If you don't understand them, well, you should not use this script. As stated earlier: it's dangerous. :)
 
-* download [smcFanControl](http://www.eidac.de/) and install it in /Applications
+* download [smcFanControl](http://www.eidac.de/) and install it in /Applications. *Beware that you will need version 2.4* and that the script will not work with version 2.5 (or probably later).
 * copy BrokenFanControl.py to /usr/local/bin and make it executable
 * download [SleepWatcher](http://www.bernhard-baehr.de/) and install it
 * * Assuming you've downloaded it in Desktop
@@ -47,6 +47,6 @@ Follow the instructions. The instructions are not very easy to follow. This is i
 * `sudo launchctl load /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher-BrokenFan.plist`
 * `sudo crontab -e`
 * * insert the line below (from */1 to end of line)
-* * `*/1 * * * * /usr/local/sbin/smcFanReset`
+* * `*/1 * * * * /usr/local/bin/BrokenFanControl.py`
 * Enjoy the silence.
 
